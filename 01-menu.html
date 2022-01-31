@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Bar</title>
+    <style>
+        .header {
+            padding: 10px;
+            text-align: right;
+            background: #d40606;
+            color: black;
+            font-size: 12px;
+        }
+        
+        .list-nonestyled {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .mainMenu {
+            background-color: lightgray;
+        }
+        
+        .mainMenu>li {
+            display: inline-block;
+        }
+        
+        .mainMenu>li>a {
+            display: inline-block;
+            padding: 0.5em;
+            text-decoration: none;
+            color: white;
+        }
+        
+        .mainMenu>li>a:hover {
+            background-color: black;
+        }
+        
+        .subMenuPosition {
+            position: relative;
+        }
+        
+        .subMenu {
+            display: none;
+            position: absolute;
+            top: 35px;
+            left: 0px;
+            white-space: nowrap;
+            padding: 1em;
+            background-color: lightgray;
+        }
+        
+        .subMenuPosition:hover .subMenu {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h1>Demo of DropDown</h1>
+    </div>
+    <nav>
+        <ul class="mainMenu list-nonestyled">
+            <li class="subMenuPosition">
+                <a href="/link1">Link 1</a>
+            </li>
+            <li class="subMenuPosition">
+                <a href="/link2">Link 2</a>
+                <ul class="subMenu list-nonestyled">
+                    <li>
+                        <a href="/link2/DD_Link_1">DD_Link_1</a>
+                    </li>
+                    <li>
+                        <a href="/link2/DD_Link_2">DD_Link_2</a>
+                    </li>
+                    <li>
+                        <a href="/link2/DD_Link_3">DD_Link_3</a>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="subMenuPosition">
+                <a href="/link3">Link 3</a>
+                <ul class="subMenu list-nonestyled">
+                    <li>
+                        <a href="/link2/DD_Link_1">DD_Link_1</a>
+                    </li>
+                    <li>
+                        <a href="/link2/DD_Link_2">DD_Link_2</a>
+                    </li>
+                    <li>
+                        <a href="/link2/DD_Link_3">DD_Link_3</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</body>
+
+</html>

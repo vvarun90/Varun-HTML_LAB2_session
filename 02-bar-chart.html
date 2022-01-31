@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VerticalBar</title>
+    <style>
+        .graph {
+            display: block;
+            width: 194px;
+            margin: 0 auto;
+            padding: 1em;
+            background-color: lightgray;
+            ;
+        }
+        
+        .graph-out {
+            display: inline-block;
+            text-align: center;
+        }
+        
+        .bar {
+            display: inline-block;
+            width: 30px;
+            height: 300px;
+            margin: 1em;
+            background-color: darkgray;
+        }
+        
+        .bar-in {
+            background-color: white;
+            height: 100%;
+        }
+        
+        @keyframes g1_size {
+            0% {
+                height: 100%;
+            }
+            100% {
+                height: 70%;
+            }
+        }
+        
+        @keyframes g2_size {
+            0% {
+                height: 100%;
+            }
+            100% {
+                height: 60%;
+            }
+        }
+        
+        @keyframes g3_size {
+            0% {
+                height: 100%;
+            }
+            100% {
+                height: 20%;
+            }
+        }
+        
+        #bar1 .bar-in {
+            animation-name: g1_size;
+            animation-duration: 1s;
+            animation-fill-mode: forwards;
+        }
+        
+        #bar2 .bar-in {
+            animation-name: g2_size;
+            animation-duration: 1s;
+            animation-fill-mode: forwards;
+        }
+        
+        #bar3 .bar-in {
+            animation-name: g3_size;
+            animation-duration: 1s;
+            animation-fill-mode: forwards;
+        }
+    </style>
+</head>
+
+<body>
+</body>
+<div class="graph">
+    <div class="graph-out">
+        <div class="bar" id="bar1">
+
+            <div class="bar-in" id="inner1"></div>
+        </div>
+    </div>
+    <div class="graph-out">
+        <div class="bar" id="bar2">
+            <div class="bar-in" id="inner2"></div>
+        </div>
+    </div>
+    <div class="graph-out">
+        <div class="bar" id="bar3">
+            <div class="bar-in" id="inner3"></div>
+        </div>
+    </div>
+    <h1>Bar Plot</h1>
+</div>
+
+</html>
